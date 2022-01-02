@@ -4,8 +4,8 @@ Exercises
 
 1. Make the tron players faster/slower.
 2. Stop a tron player from running into itself.
-3. Allow the tron player to go around the edge of the screen.
-4. How would you create a computer player?
+3. Allow the tron player to go around the edge of the screen.555555555
+4. How would you create a computer player?啊实打实的
 """
 
 from turtle import *
@@ -35,18 +35,18 @@ def draw():
     p2head = p2xy.copy()
 
     if not inside(p1head) or p1head in p2body:
-        print('Player blue wins!')
+        print("Player blue wins!")
         return
 
     if not inside(p2head) or p2head in p1body:
-        print('Player red wins!')
+        print("Player red wins!")
         return
 
     p1body.add(p1head)
     p2body.add(p2head)
 
-    square(p1xy.x, p1xy.y, 3, 'red')
-    square(p2xy.x, p2xy.y, 3, 'blue')
+    square(p1xy.x, p1xy.y, 3, "red")
+    square(p2xy.x, p2xy.y, 3, "blue")
     update()
     ontimer(draw, 50)
 
@@ -55,9 +55,9 @@ setup(420, 420, 370, 0)
 hideturtle()
 tracer(False)
 listen()
-onkey(lambda: p1aim.rotate(90), 'a')
-onkey(lambda: p1aim.rotate(-90), 'd')
-onkey(lambda: p2aim.rotate(90), 'j')
-onkey(lambda: p2aim.rotate(-90), 'l')
+onkey(lambda: p1aim.rotate(90), "a")
+onkey(lambda: p1aim.rotate(-90), "d")
+onkey(lambda: p2aim.rotate(90), "j")
+onkey(lambda: p2aim.rotate(-90), "l")
 draw()
 done()
